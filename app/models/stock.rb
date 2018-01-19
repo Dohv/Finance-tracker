@@ -2,7 +2,7 @@ class Stock < ApplicationRecord
   has_many :user_stocks
   has_many :users, through: :user_stocks
 
-  def self.find_by_icker
+  def self.find_by_ticker
     where(ticker: ticker_symbol).first
   end
 
